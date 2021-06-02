@@ -1,0 +1,644 @@
+<!doctype html> <html> <head> <meta charset="utf-8"> <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> <title>Code Viewer</title> <style> html { font-size: 100%; } body { font-size: 1.2em; font-family: sans-serif; } .container { width: 1200px; margin: 0 auto; } .drawer { display: none; } </style> <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.0.0/build/styles/atom-one-dark.min.css"> </head> <body> <div id="root" class="container"> <h1>Code Viewer</h1>
+<h2>hello</h2>
+<button class='handle' data-drawer='hello'>Open</button>
+<div class='drawer' id='hello'>
+<h4>greeting.py</h4>
+<pre><code class='language-python'>
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+
+"""
+Program som räknar ut hur gammal användaren är.
+"""
+
+year = 2020 # Hårdkodat värde för vilket år det är
+
+name = input("Skriv ett namn, klicka sen enter: ")
+age = input("Skriv en ålder, klicka sen enter: ")
+
+year_born = str(year - int(age)) # Födelseår räknas ut. Gör om age från string till integer med int()
+
+greeting = "Hej " + name + ", du är " + age + " år gammal och föddes år " + year_born
+print(greeting)
+</code></pre>
+<h4>hello-fel.py</h4>
+<pre><code class='language-python'>
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+
+"""
+Showing off som errors in Python.
+"""
+
+# Print out Hello World
+print("Just saying Hello World")
+
+# Assign the string Hello World to a variable and print it out
+str1 = "Hello World in a variable"
+print(str1)
+
+# Combine two strings and print them out
+str2 = "Hello World!"
+str3 = "Its a nice day today!"
+print(str2 + " " + str3)
+
+# Combine string and values
+a = 40
+b = 2
+c = a + b
+str4 = "Summan är " + str(c) + "."
+print(str2 + " " + str4)
+</code></pre>
+<h4>hello.py</h4>
+<pre><code class='language-python'>
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+
+"""
+Some various ways of saying Hello World in Python.
+"""
+
+# Print out Hello World
+print("Just saying Hello World")
+
+# Assign the string Hello World to a variable and print it out
+str1 = "Hello World in a variable"
+print(str1)
+
+# Combine two strings and print them out
+str2 = "Hello World!"
+str3 = "Its a nice day today!"
+print(str2 + " " + str3)
+
+# Combine string and values
+a = 40
+b = 2
+c = a + b
+str4 = "Summan är " + str(c) + "."
+print(str2 + " " + str4)
+
+
+my_name = "Per Nyden"
+print("Mitt namn är " + my_name)
+
+my_image = r"""
+                  ***********
+               ***** ***********
+            ** ****** *** ********
+           ****  ******  ** *******
+           ***     ******* ** ******
+           ***       **        *  **
+            *|/------  -------\ ** *
+             |       |=|       :===**
+              |  O  |   | O   |  }|*
+               |---- |   ----  |  |*
+               |    |___       |\/
+               |              |
+               \   -----     |
+                \           |
+                  -__ -- -/
+"""
+print(my_image)
+</code></pre>
+</div>
+<h2>lab1</h2>
+<button class='handle' data-drawer='lab1'>Open</button>
+<div class='drawer' id='lab1'>
+<h4>answer.py</h4>
+<pre><code class='language-python'>
+#!/usr/bin/env python3
+
+"""
+6af0306cd15ee4d5544b0dffcd79f23d
+python
+lab1
+v4
+peny20
+2020-08-31 17:02:44
+v4.0.0 (2019-03-05)
+
+Generated 2020-08-31 19:02:45 by dbwebb lab-utility v4.0.0 (2019-03-05).
+https://github.com/dbwebb-se/lab
+"""
+
+from dbwebb import Dbwebb
+
+
+# pylint: disable=invalid-name
+
+dbwebb = Dbwebb()
+dbwebb.ready_to_begin()
+
+
+
+# ==========================================================================
+# Lab 1 - python
+#
+# If you need to peek at examples or just want to know more, take a look at
+# the [Python manual](https://docs.python.org/3/library/index.html).
+#
+# There you will find everything this lab will go through and much more.
+#
+
+
+
+# --------------------------------------------------------------------------
+# Section 1. Integers, floats and basic arithmetics
+#
+# The foundation of numbers and basic arithmetic.
+#
+
+
+
+# """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+# Exercise 1.1 (1 points)
+#
+# Create a variable called `num_one` and give it the value 54.
+#
+# Answer with the value of `num_one`.
+#
+# Write your code below and put the answer into the variable ANSWER.
+#
+
+num_one = 54
+
+
+
+
+
+ANSWER = num_one
+
+# I will now test your answer - change false to true to get a hint.
+dbwebb.assert_equal("1.1", ANSWER, False)
+
+# """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+# Exercise 1.2 (1 points)
+#
+# Create another variable called `num_two` and give it the value 62. Create a
+# third variable called `result` and assign to it the sum of the first two
+# variables.
+#
+# Answer with the `result` variable.
+#
+# Write your code below and put the answer into the variable ANSWER.
+#
+
+
+num_two = 62
+
+result = num_one + num_two
+
+
+
+
+ANSWER = result
+
+# I will now test your answer - change false to true to get a hint.
+dbwebb.assert_equal("1.2", ANSWER, False)
+
+# """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+# Exercise 1.3 (1 points)
+#
+# Create a variable called `num_three` and give it the value 32.
+#
+# Create another variable called `num_four` and give it the value 51.
+#
+# Subtract `num_three` from `num_four` and add the `result` variable from
+# above to result of the subtraction. Answer with the result.
+#
+# Write your code below and put the answer into the variable ANSWER.
+#
+
+num_three = 32
+
+num_four = 51
+
+
+
+ANSWER = num_four - num_three + num_one + num_two
+
+# I will now test your answer - change false to true to get a hint.
+dbwebb.assert_equal("1.3", ANSWER, True)
+
+# """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+# Exercise 1.4 (1 points)
+#
+# Answer with the result of a multiplication of `num_one` and `num_three`.
+#
+# Write your code below and put the answer into the variable ANSWER.
+#
+
+
+
+
+
+
+ANSWER = num_one * num_three
+
+# I will now test your answer - change false to true to get a hint.
+dbwebb.assert_equal("1.4", ANSWER, False)
+
+# """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+# Exercise 1.5 (1 points)
+#
+# Create a variable called `float_one` and give it the value 32.25.
+#
+# Create another variable called `float_two` and give it the value 63.61.
+#
+# Sum the two values and answer with the result, rounded to two decimals. Use
+# the function `round()` to round the number to two decimals.
+#
+# Write your code below and put the answer into the variable ANSWER.
+#
+float_one = 32.25
+float_two = 63.61
+round(float_one + float_two, 2)
+
+
+
+
+
+ANSWER = round(float_one + float_two, 2)
+
+# I will now test your answer - change false to true to get a hint.
+dbwebb.assert_equal("1.5", ANSWER, False)
+
+# """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+# Exercise 1.6 (1 points)
+#
+# All variables used in the exercise below are defined above.
+#
+# Sum `num_three` with `num_one` and subtract `num_four`. Multiply the result
+# by `num_two`, add `float_two` and subtract `float_one`. Use the function
+# `round()` to round the number to two decimals.
+#
+# Answer with the result.
+#
+# Write your code below and put the answer into the variable ANSWER.
+#
+
+
+
+
+ANSWER = round((num_three + num_one - num_four) * num_two + float_two - float_one, 2)
+
+# I will now test your answer - change false to true to get a hint.
+dbwebb.assert_equal("1.6", ANSWER, False)
+
+# --------------------------------------------------------------------------
+# Section 2. Strings and concatenation
+#
+#
+#
+
+
+
+# """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+# Exercise 2.1 (1 points)
+#
+# Concatenate (svenska: konkatenera) the two words 'storage' and 'icecream'
+# and answer with the result.
+#
+# Write your code below and put the answer into the variable ANSWER.
+#
+
+
+
+
+
+
+ANSWER = "storage" + "icecream"
+
+# I will now test your answer - change false to true to get a hint.
+dbwebb.assert_equal("2.1", ANSWER, False)
+
+# """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+# Exercise 2.2 (1 points)
+#
+# Concatenate the word 'icecream' with the integer 54, with a space between
+# the two values.
+# Answer with the new string.
+#
+# Write your code below and put the answer into the variable ANSWER.
+#
+
+
+
+ANSWER = "icecream" + " " + "54"
+
+# I will now test your answer - change false to true to get a hint.
+dbwebb.assert_equal("2.2", ANSWER, True)
+
+# """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+# Exercise 2.3 (1 points)
+#
+# Concatenate the integer 54 with the word 'storage' with a space between. To
+# the resulting string concatenate the string ' and '. To this string
+# concatenate integer 62 and the word 'icecream' with a space between between
+# the two variables.
+#
+# Write your code below and put the answer into the variable ANSWER.
+#
+
+
+ANSWER = "54" + " storage" " and " "62" + " icecream"
+
+# I will now test your answer - change false to true to get a hint.
+dbwebb.assert_equal("2.3", ANSWER, True)
+
+# """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+# Exercise 2.4 (1 points)
+#
+# Assign the string value '30' to a variable called `string_number` and
+# assign the integer value 5 to a variable called `actual_number`.
+#
+# Use `int()` to change the type of `string_number` to an integer and divide
+# the integer value with `actual_number`. Answer with an integer by using the
+# function `round()`.
+#
+# Write your code below and put the answer into the variable ANSWER.
+#
+
+string_number = "30"
+actual_number = 5
+
+
+
+
+
+ANSWER = round(int(string_number)/actual_number)
+
+
+# I will now test your answer - change false to true to get a hint.
+dbwebb.assert_equal("2.4", ANSWER, False)
+
+# --------------------------------------------------------------------------
+# Section 3. Extra assignments
+#
+# These questions are worth 3 points each. Solve them for extra points.
+#
+
+
+
+# """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+# Exercise 3.1 (3 points)
+#
+# BTH is using a wind-turbine and solar panels to harvest energy from the
+# wind and sun. On a windy and sunny day in September the sun shines for 10
+# hours with an average output effect of the solar panels of 9345 W. The wind
+# turbine has an average output effect of 314 W per hour for all 24 hours of
+# the day.
+#
+# Calculate the total output energy i kWh from the wind turbine and the solar
+# panels for the entire day.
+#
+# Energy i kWh is calculated as `energy = effect * hours / 1000`.
+#
+# Write your code below and put the answer into the variable ANSWER.
+#
+
+
+
+
+
+
+ANSWER = "Replace this text with the variable holding the answer."
+
+# I will now test your answer - change false to true to get a hint.
+dbwebb.assert_equal("3.1", ANSWER, False)
+
+# """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+# Exercise 3.2 (3 points)
+#
+# Peter has the phonenumber '0731415926' and Anna has the phonenumber
+# '0727182818'. They call each other every sunday afternoon for 9 minutes.
+#
+# Calculate the number of hours that they talk with each other pr year
+# (assume 52 sundays pr year). Use that number in a string concatenation with
+# the following format:
+#
+# 'Peter calls from [#Peter's phonenumber] to Anna on [#Anna's phonenumber]
+# for [#hours] hours every year.'
+#
+# Replace the content inside [#] with the corresponding values.
+#
+# Answer with the concatenated string.
+#
+# Write your code below and put the answer into the variable ANSWER.
+#
+
+
+
+
+
+
+ANSWER = "Replace this text with the variable holding the answer."
+
+# I will now test your answer - change false to true to get a hint.
+dbwebb.assert_equal("3.2", ANSWER, False)
+
+
+dbwebb.exit_with_summary()
+</code></pre>
+<h4>dbwebb.py</h4>
+<pre><code class='language-python'>
+#!/usr/bin/env python3
+
+"""
+Python dbwebb module for asserting and auto correcting labs.
+
+It reads the answers from a json-file and use it
+for checking with assert_equal().
+"""
+
+import json
+import sys
+import os
+
+
+class Dbwebb():
+    """
+    Class for autocorrecting labs.
+    """
+
+    # Texts
+    _text = {
+        "prompt": ">>> ",
+
+        "ready": "{prompt} Ready to begin.",
+
+        "default": "Replace this text with the variable holding the answer.",
+
+        "no_answer": "{prompt} {question} NOT YET DONE.",
+
+        "correct": """{prompt} {question} CORRECT. Well done!""",
+
+        "fail": """{prompt} {question} FAIL.
+{prompt} You said:
+{answer} {type}
+{prompt}""",
+
+        "hint": """Hint:
+{answer} {type}""",
+
+        # pylint: disable=line-too-long
+        "done": """{prompt} Done with status {total}/{correct}/{failed}/{not_done} (Total/Correct/Failed/Not done).""",  # noqa
+
+        "pointspass": """{prompt} Points earned: {points}p of {total}p (PASS=>{passval}p).""",  # noqa
+
+        "pointspassdistinct": """{prompt} Points earned: {points}p of {total}p (PASS=>{passval}p PASS W DISTINCTION=>{passdistinct}p).""",  # noqa
+
+        "passdistinct": "\033[96m{prompt}Grade: PASS WITH DISTINCTION!!! :-D\033[0m",
+        "pass": "\033[92m{prompt}Grade: PASS! :-)\033[0m",
+
+        # pylint: enable=line-too-long
+        "no_pass": "\033[93m{prompt}Grade: Thou Did Not Pass. :-|\033[0m"
+    }
+
+    def __init__(self, answersFileName=".answer.json"):
+        """
+        Init by reading json-file with answers.
+        """
+        location = os.path.realpath(
+            os.path.join(
+                os.getcwd(),
+                os.path.dirname(__file__)
+            )
+        )
+        self.answers = json.load(open(os.path.join(location, answersFileName)))
+        self.correct = 0
+        self.failed = 0
+        self.not_done = 0
+        self.points = 0
+        self.prompt = self._text["prompt"]
+
+    def ready_to_begin(self):
+        """
+        Called before everything starts.
+        """
+        print(self._text["ready"].format(prompt=self.prompt))
+
+    def assert_equal(self, question, answer, hint=False):
+        """
+        Check if the answer is correct or not, present a hint if asked for.
+        """
+        status = None
+
+        if answer == self._text["default"]:
+            status = self._text["no_answer"].format(
+                prompt=self.prompt,
+                question=question
+            )
+            self.not_done += 1
+
+        elif answer == self.answers["answers"][question]:
+            status = self._text["correct"].format(
+                prompt=self.prompt,
+                question=question
+            )
+            self.correct += 1
+            self.points += self.answers["points"][question]
+
+        else:
+            status = self._text["fail"].format(
+                prompt=self.prompt,
+                question=question,
+                answer=answer,
+                type=str(type(answer))
+            )
+
+            if hint:
+                status += self._text["hint"].format(
+                    answer=self.answers["answers"][question],
+                    type=str(type(self.answers["answers"][question]))
+                )
+
+            self.failed += 1
+
+        print(status)
+
+    def exit_with_summary(self):
+        """
+        Print a exit message with the result of all tests.
+        Exit with status 0 if all tasks are solved, else exit with status 1.
+        """
+        questions = self.answers["summary"]["questions"]
+        points = self.answers["summary"]["points"]
+        pass_val = self.answers["summary"]["pass"]
+        pass_distinct = self.answers["summary"]["passdistinct"]
+
+        print(self._text["done"].format(
+            prompt=self.prompt,
+            total=questions,
+            correct=self.correct,
+            failed=self.failed,
+            not_done=self.not_done
+        ))
+
+        if pass_distinct:
+            print(self._text["pointspassdistinct"].format(
+                prompt=self.prompt,
+                points=self.points,
+                total=points,
+                passval=pass_val,
+                passdistinct=pass_distinct
+            ))
+        elif pass_val:
+            print(self._text["pointspass"].format(
+                prompt=self.prompt,
+                points=points,
+                total=questions,
+                passval=pass_val
+            ))
+
+
+        # Grading
+        did_pass = self.correct == questions
+        if pass_val:
+            did_pass = self.points >= pass_val
+
+        did_pass_distinct = None
+        if pass_distinct:
+            did_pass_distinct = self.points >= pass_distinct
+
+        if did_pass_distinct:
+            print(self._text["passdistinct"].format(prompt=self.prompt))
+            sys.exit(0)
+        elif did_pass:
+            print(self._text["pass"].format(prompt=self.prompt))
+            sys.exit(0)
+        else:
+            print(self._text["no_pass"].format(prompt=self.prompt))
+            sys.exit(42)
+</code></pre>
+</div>
+<h2>plane</h2>
+<button class='handle' data-drawer='plane'>Open</button>
+<div class='drawer' id='plane'>
+<h4>plane.py</h4>
+<pre><code class='language-python'>
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+
+"""
+Programmet konverterar meter, km/h och Celsius till feet, mph och Farenheit.
+"""
+
+meter = input("Höjd över havet (meter): ")
+kilometer = input("Hastighet (km/h): ")
+celsius = input("Temperatur utanför flygplanet (Celsius): ")
+
+foot = float(meter) * 3.28084
+mile = float(kilometer) * 0.62137
+farenheit = float(celsius) * 9 / 5 + 32
+
+m_t_f = "Höjd över havet (feet): " + str(foot)
+k_t_m = "Hastighet (mph): " + str(mile)
+f_t_c = "Temperatur utanför planet (Farenheit): " + str(farenheit)
+
+print(m_t_f)
+print(k_t_m)
+print(f_t_c)
+</code></pre>
+</div>
+</div> <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.0.0/build/highlight.min.js"></script> <script>hljs.highlightAll();</script> <script> (function IIFE() { var handles = document.querySelectorAll(".handle"); handles.forEach(function(handle) { handle.addEventListener("click", handleClick); }); function handleClick(event) { var drawerID = event.target.dataset.drawer; var drawer = document.getElementById(drawerID); if (event.target.textContent === "Open") { drawer.style.display = "block"; event.target.textContent = "Close"; } else { drawer.style.display = "none"; event.target.textContent = "Open"; } } })(); </script> </body> </html>
